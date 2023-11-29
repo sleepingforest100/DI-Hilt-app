@@ -14,7 +14,8 @@ import javax.inject.Singleton
 @Module
 object NetworkModule {
     @WeatherUrl
-    private const val weatherUrl = "https://api.weatherapi.com/v1/"
+    @Provides
+    fun weatherUrl() = "https://api.weatherapi.com/v1/"
     @WeatherUrl
     @Provides
     @Singleton
